@@ -1,11 +1,16 @@
 # nodejs-bootstrap
 
-A simple bootstrap with basic tools to developer
+A simple bootstrap with basic tools to developers
 
+
+
+[![Dependencies Status](https://david-dm.org/marcosrava/nodejs-bootstrap.svg)](https://david-dm.org/marcosrava/nodejs-bootstrap)
+[![Build Status](https://travis-ci.org/MarcosRava/nodejs-bootstrap.svg)](https://travis-ci.org/MarcosRava/nodejs-bootstrap)
 ## Features
 ### Including
   * ```.gitignore```
   * ```.eslintrc```
+  * ```.npmignore```
   * ```.editorconfig```
   * nodemon
   * babel compiler (presets: es2015, stage-1)
@@ -21,13 +26,13 @@ A simple bootstrap with basic tools to developer
     npm run dev
 
   ```
-  run nodemon with babel compile
+  run nodemon and tests with babel compile
 
   ```
     npm run build
 
   ```
-  run babel and add compiled from ```src/``` to ```build/index.js```
+  run babel and add compiled source from ```src/``` to ```build/index.js```
 
   ```
     npm start
@@ -57,4 +62,10 @@ A simple bootstrap with basic tools to developer
     npm test
 
   ```
-  run ```npm run lint```, ```npm run build``` and  ```mocha --compilers js:babel-register```
+  run ```npm run lint```, ```npm run build``` and  ```mocha --compilers js:babel-register``` using code from ```build``` folder
+
+  ```
+    npm run test-es6
+
+  ```
+  run test using code from ```src``` instead of ```build```

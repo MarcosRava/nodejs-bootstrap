@@ -2,7 +2,7 @@
   "name": "nodejs-bootstrap",
   "version": "0.0.0",
   "author": "Marcos Rava <marcosrava@gmail.com>",
-  "description": "",
+  "description": "A simple bootstrap with basic tools to developers",
   "license": "MIT",
   "private": false,
   "main": "build",
@@ -11,12 +11,13 @@
   },
   "scripts": {
     "start": "npm run build && node build",
-    "dev": "nodemon --exec babel-node src/index.js",
+    "dev": "nodemon --exec 'npm run lint && npm run test-es6' -i build ",
+    "test": "npm run lint && npm run build && NODE_PATH=./build npm run test-es6",
+    "test-es6": "NODE_PATH=./src mocha --compilers js:babel-register",
     "postinstall": "npm run check-dependencies",
     "check-dependencies": "nsp check",
-    "test": "npm run lint && npm run build && mocha --compilers js:babel-register",
-    "lint": "eslint src",
-    "build": "mkdir -p build && babel src --out-file build/index.js"
+    "lint": "eslint src test",
+    "build": "mkdir -p build && NODE_PATH=./build babel src --out-file build/index.js"
   },
   "config": {
     "pre-git": {

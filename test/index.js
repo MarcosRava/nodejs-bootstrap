@@ -1,5 +1,6 @@
 import expect from 'expect.js';
-import Test from '../';
+import Test from 'index.js';
+
 
 describe('TestClass', function() {
   it('should have hello attribute', function () {
