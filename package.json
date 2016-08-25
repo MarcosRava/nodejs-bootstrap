@@ -1,0 +1,53 @@
+{
+  "name": "nodejs-bootstrap",
+  "version": "0.0.0",
+  "author": "Marcos Rava <marcosrava@gmail.com>",
+  "description": "",
+  "license": "MIT",
+  "private": false,
+  "main": "build",
+  "engines": {
+    "node": "~6.3.x"
+  },
+  "scripts": {
+    "start": "npm run build && node build",
+    "dev": "nodemon --exec babel-node src/index.js",
+    "postinstall": "npm run check-dependencies",
+    "check-dependencies": "nsp check",
+    "test": "npm run lint && npm run build && mocha --compilers js:babel-register",
+    "lint": "eslint src",
+    "build": "mkdir -p build && babel src --out-file build/index.js"
+  },
+  "config": {
+    "pre-git": {
+      "pre-commit": [
+        "npm run lint"
+      ],
+      "post-commit": [
+        "git status"
+      ],
+      "pre-push": [
+        "npm test"
+      ]
+    }
+  },
+  "babel": {
+    "presets": [
+      "es2015",
+      "stage-1"
+    ]
+  },
+  "devDependencies": {
+    "babel-cli": "^6.11.4",
+    "babel-core": "^6.3.26",
+    "babel-eslint": "^6.1.2",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-stage-1": "^6.13.0",
+    "eslint": "^3.3.1",
+    "expect.js": "^0.3.1",
+    "mocha": "^3.0.2",
+    "nodemon": "^1.10.2",
+    "nsp": "^2.6.1",
+    "pre-git": "^3.10.0"
+  }
+}
