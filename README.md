@@ -26,13 +26,13 @@ A simple bootstrap with basic tools to developers
     npm run dev
 
   ```
-  run nodemon and tests with babel compile
+  run nodemon and tests (importing from ```src/```) with babel compile
 
   ```
     npm run build
 
   ```
-  run babel and add compiled source from ```src/``` to ```build/index.js```
+  run lint, babel compiler and add compiled source from ```src/``` to ```build/index.js```
 
   ```
     npm start
@@ -62,10 +62,4 @@ A simple bootstrap with basic tools to developers
     npm test
 
   ```
-  run ```npm run lint```, ```npm run build``` and  ```mocha --compilers js:babel-register``` using code from ```build``` folder
-
-  ```
-    npm run test-es6
-
-  ```
-  run test using code from ```src``` instead of ```build```
+  run ```npm run build``` and  ```mocha --compilers js:babel-register``` using code from ```build``` folder
