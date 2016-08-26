@@ -20,7 +20,7 @@
     "lint": "eslint src test",
     "coverage": "cross-env NODE_PATH=./src babel-node ./node_modules/.bin/babel-istanbul cover _mocha",
     "climate-coverage": "npm run coverage && codeclimate-test-reporter < coverage/lcov.info",
-    "build": "npm run lint && mkdir -p build && cross-env NODE_PATH=./build babel src --out-file build/index.js && npm run climate-coverage"
+    "build": "npm run lint && mkdir -p build && cross-env NODE_PATH=./build babel src --out-file build/index.js"
   },
   "config": {
     "pre-git": {

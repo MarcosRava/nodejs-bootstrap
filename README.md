@@ -49,7 +49,7 @@ npm install
     npm run build
 
   ```
-  run lint, babel compiler and add compiled source from ```src/``` to ```build/index.js``` and coverage
+  run lint, babel compiler and add compiled source from ```src/``` to ```build/index.js```
 
   ```
     npm run climate-coverage
