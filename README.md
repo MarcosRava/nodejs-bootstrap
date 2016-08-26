@@ -2,8 +2,6 @@
 
 A simple bootstrap with basic tools to developers
 
-
-
 [![Dependencies Status](https://david-dm.org/marcosrava/nodejs-bootstrap.svg)](https://david-dm.org/marcosrava/nodejs-bootstrap)
 [![Build Status](https://travis-ci.org/MarcosRava/nodejs-bootstrap.svg)](https://travis-ci.org/MarcosRava/nodejs-bootstrap)
 [![Issue Count](https://codeclimate.com/github/MarcosRava/nodejs-bootstrap/badges/issue_count.svg)](https://codeclimate.com/github/MarcosRava/nodejs-bootstrap)
