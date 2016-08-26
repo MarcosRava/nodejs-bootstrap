@@ -3,4 +3,6 @@ src
 .gitignore
 .eslintrc
 .travis.yml
+.env
 test
+covarage

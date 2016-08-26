@@ -6,6 +6,9 @@ A simple bootstrap with basic tools to developers
 
 [![Dependencies Status](https://david-dm.org/marcosrava/nodejs-bootstrap.svg)](https://david-dm.org/marcosrava/nodejs-bootstrap)
 [![Build Status](https://travis-ci.org/MarcosRava/nodejs-bootstrap.svg)](https://travis-ci.org/MarcosRava/nodejs-bootstrap)
+[![Issue Count](https://codeclimate.com/github/MarcosRava/nodejs-bootstrap/badges/issue_count.svg)](https://codeclimate.com/github/MarcosRava/nodejs-bootstrap)
+[![Test Coverage](https://codeclimate.com/github/MarcosRava/nodejs-bootstrap/badges/coverage.svg)](https://codeclimate.com/github/MarcosRava/nodejs-bootstrap/coverage)
+
 ## Features
 ### Including
   * ```.gitignore```
@@ -18,9 +21,19 @@ A simple bootstrap with basic tools to developers
   * git-pre-commit (run lint)
   * git-post-commit (run git status)
 
+## Installation
+
+Clone this repository, open terminal and install dependencies
+
+```sh
+cd nodejs-bootstrap
+npm install
+
+```
+
 ## Usage
 
-* Scripts
+### Scripts
 
   ```
     npm run dev
@@ -29,10 +42,22 @@ A simple bootstrap with basic tools to developers
   run nodemon and tests (importing from ```src/```) with babel compile
 
   ```
+    npm run coverage
+
+  ```
+  run istanbul coverage and put result in ```coverage/```
+
+  ```
     npm run build
 
   ```
-  run lint, babel compiler and add compiled source from ```src/``` to ```build/index.js```
+  run lint, babel compiler and add compiled source from ```src/``` to ```build/index.js``` and coverage
+
+  ```
+    npm run climate-coverage
+
+  ```
+  run coverage and send it to [code-climate](https://codeclimate.com/) (you need to set CODECLIMATE_REPO_TOKEN as an enviroment variable)
 
   ```
     npm start
