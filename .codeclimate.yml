@@ -13,5 +13,5 @@ engines:
       languages:
       - javascript
 exclude_paths:
-- "build/*"
+- build/**/*
 
